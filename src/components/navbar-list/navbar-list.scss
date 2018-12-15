@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.navbar-list {
+  justify-content: center;
+  list-style: none;
+  display: inline-flex;
+  margin: auto $distance-wee;
+
+  .navbar-list-element {
+    @include normalizeFont($font-size-medium, $font-weight-semi-bold, $color-white);
+    transition: $transition-duration all;
+    padding: $distance-tiny $distance-wee;
+    border-bottom: 2px dashed transparent;
+
+    &:hover {
+      border-bottom: 2px dashed $color-white;
+    }
+  }
+}
