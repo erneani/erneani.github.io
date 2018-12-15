@@ -41,8 +41,8 @@ export default class Header extends React.Component {
                     <Label label="V. Ernani" className="header-brand-title"/>
                 </Block>
                 <Navbar>
-                  <NavbarList />
-                  <CallButton href="#" label="Contato"/>
+                  <NavbarList link="http://github.com/erneani" label="Sobre mim"/>
+                  <CallButton href="http://github.com/erneani" label="Contato"/>
                 </Navbar>
             </div>
         )

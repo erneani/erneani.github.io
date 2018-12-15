@@ -5,6 +5,7 @@ $secondary-color:                   #8000ff;
 
 $color-white:                       #fff;
 $color-dark:                        #343434;
+$color-dark-low-opacity:            rgba(20,20,20,0.8);
 $color-light-orange:                #e56634;
 $color-light-purple:                #c9496d;
 $principal-color-gradient:          linear-gradient(-225deg, $primary-color 0%, $color-light-orange 15%, $color-light-purple 40%, $secondary-color 70%);
@@ -26,6 +27,8 @@ $font-size-base:                    1rem;       //16px
 $font-size-medium:                  1.125rem;   //18px
 $font-size-large:                   1.25rem;    //20px
 $font-size-extra:                   1.375rem;   //22px
+
+$font-size-title:                   2rem;       //32px
 
 /* PADDINGS AND MARGINS */
 

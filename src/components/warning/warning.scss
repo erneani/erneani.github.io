@@ -1,0 +1,8 @@
+@import '../../styles/variables.scss';
+
+.warning-div {
+  border: 2px dashed $color-white;
+  padding: $distance-large;
+  margin: auto auto;
+  max-width: 70%;
+}

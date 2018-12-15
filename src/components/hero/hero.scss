@@ -2,6 +2,10 @@
 
 .hero {
     background-image: $principal-color-gradient;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
     height: 700px;
     width: 100%;
 }
