@@ -6,7 +6,6 @@ import photo from '../images/photo.jpeg';
 const SectionBody = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
-  height: 80rem;
 
   @media screen and (max-width:1020px) {
     display: flex;
