@@ -6,7 +6,6 @@ import App from './App';
 const root = document.getElementById('root');
 
 document.querySelector('body').style.margin=0;
-document.querySelector('body').style.background="url('./images/triangles.png')";
 
 ReactDOM.render((
   <BrowserRouter>
