@@ -143,7 +143,7 @@ export default class Header extends React.Component {
     }
   }
 
-  handleGoTo = (id) => {
+  handleGoTo = (id, duration) => {
     const element = document.querySelector(`${id}`);
     window.scrollTo(window.innerHeight,element.offsetTop-102);
   }
@@ -161,7 +161,7 @@ export default class Header extends React.Component {
         </HeaderBrand>
         <HeaderNavbar id="navbar">
           { navbarItens.map(item => {
-            return <NavbarItem key={item.index} onClick={() => this.handleGoTo(item.id)}>{ item.label }</NavbarItem>
+            return <NavbarItem key={item.index} onClick={() => this.handleGoTo(item.id,2)}>{ item.label }</NavbarItem>
           }) }
           <CallButton href='https://github.com/erneani' target='_blank'>Contato</CallButton>
         </HeaderNavbar>
