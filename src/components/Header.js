@@ -61,6 +61,7 @@ const NavbarItem = styled.a`
   border-bottom: 2px dashed transparent;
   font-size: 20px;
   margin: auto 0;
+  cursor: pointer;
   color: #fff;
 
   transition: 0.3s all;
@@ -101,7 +102,7 @@ export default class Header extends React.Component {
     super(props);
     this.state = {
       navbarItens: [
-        { label:'Sobre mim', url:'https://github.com/erneani' },
+        { label:'Sobre mim', id:'#about' },
       ],
       pageScroll: false,
       menuShow: false,
@@ -142,8 +143,13 @@ export default class Header extends React.Component {
     }
   }
 
+  handleGoTo = (id) => {
+    const element = document.querySelector(`${id}`);
+    window.scrollTo(window.innerHeight,element.offsetTop-102);
+  }
+
   render () {
-    const { pageScroll } = this.state;
+    const { pageScroll, navbarItens } = this.state;
     return (
       <HeaderContainer 
         backgroundColor={ pageScroll?'rgba(12,12,12,0.8)':'transparent' }
@@ -154,8 +160,8 @@ export default class Header extends React.Component {
           <HeaderBrandLabel>V.Ernani</HeaderBrandLabel>
         </HeaderBrand>
         <HeaderNavbar id="navbar">
-          { this.state.navbarItens.map(item => {
-            return <NavbarItem href={ item.url }>{ item.label }</NavbarItem>
+          { navbarItens.map(item => {
+            return <NavbarItem key={item.index} onClick={() => this.handleGoTo(item.id)}>{ item.label }</NavbarItem>
           }) }
           <CallButton href='https://github.com/erneani' target='_blank'>Contato</CallButton>
         </HeaderNavbar>

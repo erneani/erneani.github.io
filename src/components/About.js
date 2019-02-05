@@ -4,8 +4,9 @@ import { Section, SectionHeader, SectionTitle, ColoredButton } from '../styles/V
 import photo from '../images/photo.jpeg';
 
 const SectionBody = styled.div`
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  height: 80rem;
 
   @media screen and (max-width:1020px) {
     display: flex;
@@ -61,7 +62,7 @@ const ContentButton = styled.div`
 export const About = () => {
   return (
     <Section>
-      <SectionHeader>
+      <SectionHeader id="about">
         <SectionTitle orange='#ff8000'>Sobre mim</SectionTitle>
       </SectionHeader>
       <SectionBody>
