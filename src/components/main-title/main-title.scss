@@ -1,8 +1,0 @@
-@import '../../styles/variables.scss';
-
-.main-title {
-  @include normalizeFont(140px, $font-weight-semi-bold, $color-white);
-  padding: 0 $distance-base;
-  margin: auto 0;
-  width: 70%;
-}
