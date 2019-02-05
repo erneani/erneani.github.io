@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
-import Header from './components/header/Header';
+import styled from 'styled-components';
+import triangles from './images/triangles.png';
+import Header from './components/Header';
 import Home from './pages/Home';
+
+const AppContainer = styled.div`
+  background-image: url(${triangles});
+  background-repeat: repeat;
+  background-size: 100%;
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <AppContainer>
         <Header />
         <Home />
-      </div>
+      </AppContainer>
     );
   }
 }
