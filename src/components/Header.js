@@ -52,7 +52,7 @@ const HeaderNavbar = styled.ul`
     display: flex;
     opacity: 0;
     left: 0;
-    width: ${window.innerWidth-15}px;
+    width: ${window.innerWidth}px;
   }
 `;
 

@@ -25,11 +25,12 @@ const AboutImage = styled.img`
 `;
 
 const ContentContainer = styled.div`
-  display: grid;
+  flex-direction: column;
   font-family: 'Open Sans', sans-serif;
   padding: 1rem;
+  display: flex;
   
-  align-items: ${props => props.alignItems};
+  justify-content: ${props => props.content};
 
   @media screen and (max-width:1020px) {
     width: 80%;
@@ -39,8 +40,9 @@ const ContentContainer = styled.div`
 
 const ContentTitle = styled.div`
   font-weight: bold;
-  font-size: 24px;
   text-align: center;
+  font-size: 24px;
+  margin: 0 auto;
 
   color: ${props => props.color};
 `;
@@ -53,6 +55,7 @@ const ContentParagraph = styled.p`
 const ContentButton = styled.div`
   text-align: center;
   padding: 1rem 0;
+  margin: 0 auto;
 `;
 
 export const About = () => {
@@ -63,18 +66,18 @@ export const About = () => {
       </SectionHeader>
       <SectionBody>
         <AboutImage src={photo} />
-        <ContentContainer alignItems='start'>
+        <ContentContainer content='flex-start'>
           <ContentTitle color='#ff8000'>
             Quem sou eu?
           </ContentTitle>
           <ContentParagraph>
-            Potiguar, cursando graduação em Tecnologia da Informação pela UFRN, Técnico em Informática pelo IFRN, amante de Design, de ciência de dados, de desafios de programação e, principalmente de desenvolvimento WEB.
+            Potiguar, cursando graduação em Tecnologia da Informação pela UFRN, Técnico em Informática pelo IFRN, amante de Design, de ciência de dados, de desafios de programação e, principalmente, de desenvolvimento WEB.
           </ContentParagraph>
           <ContentButton>
             <ColoredButton orange='#ff8000'>Minha formação</ColoredButton>
           </ContentButton>
         </ContentContainer>
-        <ContentContainer alignItems='end'>
+        <ContentContainer content='flex-end'>
           <ContentTitle color='#8000ff'>As coisas que gosto de fazer</ContentTitle>
           <ContentParagraph>Atuo como desenvolvedor WEB fullstack, criando desde a aparência de aplicações até o Banco de Dados. Além disso, também atuo como Devops e como técnico em Redes! </ContentParagraph>
           <ContentButton>
