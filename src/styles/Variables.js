@@ -98,7 +98,7 @@ export const SectionTitle = styled.h3`
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: 30px;
-  color: rgb(12,12,12);
+  color: #454545;
   display: inline-flex;
 
   text-align: ${props => props.center || props.right};

@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { CallButton } from '../styles/Variables';
 
+import curriculum from '../misc/curriculum_pt.pdf';
+
 const HeroContainer = styled.div`
   background-image: linear-gradient(-225deg, #ff8000 0%, #e56634 15%, #c9496d 40%, #8000ff 70%);
   font-family: 'Open Sans', sans-serif;
@@ -41,7 +43,7 @@ export const Hero = () => {
         <HeroTitle>Olá, me chamo Ernani.</HeroTitle>
         <HeroSubTitle>Sou um Desenvolvedor.</HeroSubTitle>
         <HeroButton>
-          <CallButton>Veja meu curriculum</CallButton>
+          <CallButton href={ curriculum } target="_blank">Veja meu curriculum</CallButton>
         </HeroButton>
       </HeroContent>
     </HeroContainer>

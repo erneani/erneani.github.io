@@ -50,6 +50,7 @@ const ContentTitle = styled.div`
 const ContentParagraph = styled.p`
   text-align: center;
   margin: 1rem 0;
+  color: #454545;
 `;
 
 const ContentButton = styled.div`
