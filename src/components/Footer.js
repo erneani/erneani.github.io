@@ -62,7 +62,7 @@ const FooterBar = styled.div`
     flex-direction: row;
     border-top: 1px solid #8000ff;
     display: flex;
-    padding: 0.5rem 2rem 0.5rem;
+    padding: 1rem 2rem 3rem;
     margin: 3rem auto 0;
     width: 50%;
 `;
