@@ -62,8 +62,8 @@ const ContentButton = styled.div`
 export const About = () => {
   return (
     <Section>
-      <SectionHeader id="about">
-        <SectionTitle orange='#ff8000'>Sobre mim</SectionTitle>
+      <SectionHeader align="left" id="about">
+        <SectionTitle color='#ff8000'>Sobre mim</SectionTitle>
       </SectionHeader>
       <SectionBody>
         <AboutImage src={photo} />
@@ -75,14 +75,14 @@ export const About = () => {
             Potiguar, cursando graduação em Tecnologia da Informação pela UFRN, Técnico em Informática pelo IFRN, amante de Design, de ciência de dados, de desafios de programação e, principalmente, de desenvolvimento WEB.
           </ContentParagraph>
           <ContentButton>
-            <ColoredButton orange='#ff8000'>Minha formação</ColoredButton>
+            <ColoredButton color='#ff8000'>Minha formação</ColoredButton>
           </ContentButton>
         </ContentContainer>
         <ContentContainer content='flex-end'>
           <ContentTitle color='#8000ff'>As coisas que gosto de fazer</ContentTitle>
           <ContentParagraph>Atuo como desenvolvedor WEB fullstack, criando desde a aparência de aplicações até o Banco de Dados. Além disso, também atuo como Devops e como técnico em Redes! </ContentParagraph>
           <ContentButton>
-            <ColoredButton purple='#8000ff'>Meus serviços</ColoredButton>
+            <ColoredButton color='#8000ff'>Meus serviços</ColoredButton>
           </ContentButton>
         </ContentContainer>
       </SectionBody>

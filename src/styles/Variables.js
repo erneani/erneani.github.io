@@ -75,32 +75,38 @@ export const CallButton = styled.a`
 `;
 
 export const ColoredButton = styled(CallButton)`
-  color: ${props => props.purple || props.orange};
-  border: 2px solid ${props => props.purple || props.orange};
+  color: ${props => props.color || '#454545'};
+  border: 2px solid ${props => props.color || '#454545'};
 
   &:hover {
     color: #fff;
-    background-color: ${props => props.purple || props.orange};
+    background-color: ${props => props.color || '#454545'};
   }
 `;
 
 export const Section = styled.div`
   flex-direction: column;
-  padding: 2rem 0;
+  padding: 5rem 0;
   display: flex;
+
+  background-color: ${props => props.background || 'rgba(255,255,255,0.4)'}
 `;
 
 export const SectionHeader = styled.div`
-  padding: 0 2rem;
+  padding: 0 5rem;
+  
+  text-align: ${props => props.align || 'center'};
+
+  @media screen and (max-width: 1020px) {
+    text-align: center;
+  }
 `;
 
 export const SectionTitle = styled.h3`
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  font-size: 30px;
-  color: #454545;
+  font-size: 42px;
   display: inline-flex;
 
-  text-align: ${props => props.center || props.right};
-  border-bottom: 3px solid ${props => props.orange || props.purple};
+  color: ${props => props.color || '#454545'};
 `;

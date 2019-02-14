@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../images/erneani_purple.png'
+import logo from '../images/Erneani light logo.png'
 
 const FooterContainer = styled.div`
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(128,0,255,1);
     flex-direction: column;
-    padding: 0;
+    padding-top: 3rem;
     display: flex;
 `;
 
@@ -13,15 +13,15 @@ const ContactColumn = styled.div`
     flex-direction: column;
     font-family: 'Open Sans', sans serif;
     margin: 0 auto;
-    color: #454545;
+    color: #fff;
 `;
 
 const ContactTitle = styled.h3`
     text-align: center;
     font-weight: 800;
-    font-size: 42px;
+    font-size: 50px;
     margin: 0;
-    color: #8000ff;
+    color: #fff;
 `;
 
 const ContactText = styled.div`
@@ -29,7 +29,7 @@ const ContactText = styled.div`
     text-align: center;
     font-size: 18px;
     margin: 2rem 0;
-    color: #ff8000;
+    color: #fff;
 `;
 
 const ContactItem = styled.h5`
@@ -52,19 +52,23 @@ const ListItem = styled.li`
     font-size: 36px;
 
     a {
-        color: #454545;
+        color: #fff;
+
+        transition: 0.25s ease-in;
+
+        &:hover {
+            color: #ff8000;
+        }
     }
 `;
 
 const FooterBar = styled.div`
-    background-color: #fff;
     justify-content: center;
     flex-direction: row;
-    border-top: 1px solid #8000ff;
+    border-top: 1px solid #fff;
     display: flex;
     padding: 1rem 2rem 3rem;
-    margin: 3rem auto 0;
-    width: 50%;
+    margin: 5rem auto 0;
 `;
 
 const FooterBarImage = styled.img`
@@ -77,12 +81,12 @@ const FooterBarName = styled.div`
     font-weight: 400;
     padding-left: 0.5rem;
     margin: auto 0.5rem;
-    color: #454545;
+    color: #fff;
 `;
 
 export const Footer = () => {
     return(
-        <FooterContainer>
+        <FooterContainer id="contact">
             <ContactColumn>
                 <ContactTitle>Contate-me</ContactTitle>
                 <ContactText>
@@ -91,7 +95,7 @@ export const Footer = () => {
                 <ContactItem>+55 (84) 99147-9189</ContactItem>
                 <ContactItem>viniciusernanicarvalho@gmail.com</ContactItem>
                 <ContactList>
-                    <ListItem><a href="https://erneani.github.io" target="_blank"><i class="fab fa-github"></i></a></ListItem>
+                    <ListItem><a href="https://erneani.github.io" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></ListItem>
                     {/*<ListItem><a href="#"><i className="fab fa-linkedin"></i></a></ListItem> */}
                     {/*<ListItem><a href="#"><i className="fab fa-medium"></i></a></ListItem> */}
                 </ContactList>

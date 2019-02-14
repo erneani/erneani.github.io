@@ -60,7 +60,7 @@ const NavbarItem = styled.a`
   text-decoration: none;
   border-bottom: 2px dashed transparent;
   font-size: 20px;
-  margin: auto 0;
+  margin: auto 0.75rem;
   cursor: pointer;
   color: #fff;
 
@@ -103,6 +103,7 @@ export default class Header extends React.Component {
     this.state = {
       navbarItens: [
         { label:'Sobre mim', id:'#about' },
+        { label:'Formação', id:'#formation' },
       ],
       pageScroll: false,
       menuShow: false,
@@ -143,7 +144,7 @@ export default class Header extends React.Component {
     }
   }
 
-  handleGoTo = (id, duration) => {
+  handleGoTo = (id) => {
     const element = document.querySelector(`${id}`);
     window.scrollTo(window.innerHeight,element.offsetTop-102);
   }
@@ -161,9 +162,9 @@ export default class Header extends React.Component {
         </HeaderBrand>
         <HeaderNavbar id="navbar">
           { navbarItens.map(item => {
-            return <NavbarItem key={item.index} onClick={() => this.handleGoTo(item.id,2)}>{ item.label }</NavbarItem>
+            return <NavbarItem key={item.index} onClick={() => this.handleGoTo(item.id)}>{ item.label }</NavbarItem>
           }) }
-          <CallButton href='https://github.com/erneani' target='_blank'>Contato</CallButton>
+          <CallButton>Contato</CallButton>
         </HeaderNavbar>
         <MenuIcon onClick={this.handleMenu}>
           <i className="fas fa-caret-square-down"></i>
